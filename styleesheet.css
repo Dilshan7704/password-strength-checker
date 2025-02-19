@@ -1,0 +1,107 @@
+:root {
+    --primary: rgb(66, 36, 197);
+    --input-bg: rgb(5, 5, 59);
+    --text-color: white;
+    --progress-bg: #f5f5f5;
+    --border-radius: 1rem;
+    --transition-speed: 0.4s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('121702-724719441_tiny.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--text-color);
+}
+
+.password-checker {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform var(--transition-speed) ease-in-out;
+}
+
+.password-checker:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.input-group::before {
+    position: absolute;
+    content: '\1f512';
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input#password {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
+    color: var(--text-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color var(--transition-speed) ease-in-out;
+}
+
+input#password:focus {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+h5 {
+    margin: 2rem 0 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.progress {
+    height: 0.5rem;
+    width: 100%;
+    background-color: var(--progress-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.bar {
+    width: 0%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: inherit;
+    transition: width var(--transition-speed) ease-in-out, background-color var(--transition-speed) ease-in-out;
+}
